@@ -2,12 +2,11 @@ package com.slr;
 
 public class SLR {
     private double[][] dataSet;
-    private double sumX, sumY, sumXSqr, sumXY, x;
+    private double sumX, sumY, sumXSqr, sumXY;
     private int n;
 
-    public SLR(double[][] iDataSet, double iX) {
+    public SLR(double[][] iDataSet) {
         dataSet = iDataSet;
-        x = iX;
         n = iDataSet.length;
 
         for(int i = 0; i < iDataSet.length; i++) {
@@ -28,7 +27,7 @@ public class SLR {
                 (n * sumXSqr - Math.pow(sumX, 2));
 	}
 
-    public double predictY() {
+    public double predictY(double x) {
         return beta0() + beta1() * x;
     }
 
