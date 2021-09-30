@@ -36,10 +36,10 @@ public class SLRAgent extends Agent {
 						{1518,58}
 				};
 
-				SLR slr = new SLR(dataSet, x);
+				SLR slr = new SLR(dataSet);
 
 				System.out.println("Y = " + slr.beta0() + " + "+ slr.beta1() + "(" + x + ")");
-				System.out.println("Y = " + slr.predictY());
+				System.out.println("Y = " + slr.predictY(x));
 			}
 		} );
 	}
