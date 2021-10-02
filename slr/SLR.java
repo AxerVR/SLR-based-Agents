@@ -1,19 +1,17 @@
 package com.slr;
 
 public class SLR {
-    private double[][] dataSet;
     private double sumX, sumY, sumXSqr, sumXY;
     private int n;
 
-    public SLR(double[][] iDataSet) {
-        dataSet = iDataSet;
-        n = iDataSet.length;
+    public SLR(double[][] dataSet) {
+        n = dataSet.length;
 
-        for(int i = 0; i < iDataSet.length; i++) {
-            sumX += iDataSet[i][1];
-            sumY += iDataSet[i][0];
-            sumXSqr += iDataSet[i][1] * iDataSet[i][1];
-            sumXY += iDataSet[i][1] * iDataSet[i][0];
+        for(int i = 0; i < dataSet.length; i++) {
+            sumX += dataSet[i][1];
+            sumY += dataSet[i][0];
+            sumXSqr += dataSet[i][1] * dataSet[i][1];
+            sumXY += dataSet[i][1] * dataSet[i][0];
         }
     }
 
